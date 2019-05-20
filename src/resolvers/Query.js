@@ -8,7 +8,7 @@ const Query = {
       author: 1
     };
   },
-  users(parent, args, { db }, info) {
+  users(parent, args, { db, prisma }, info) {
     if (args.query) {
       return db.users.filter(user => {
         return user.name.toLowerCase().includes(args.query.toLowerCase());

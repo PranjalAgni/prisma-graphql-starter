@@ -13,6 +13,8 @@ Just use `prisma.query` to query anything.
 Example
 We can pass query in the parameters.
 
+Parameters => (Operation_args, selection_set)
+
 ```js
 // Promise Version
 prisma.query.users(null, '{ id name posts {id title body} }').then(data => {
